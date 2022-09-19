@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees Information</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="side-nav">
+            <a href="#" class="logo">
+                <img src="logo.png" width="40" height="40">
+            </a>
+            <ul class="nav-links">
+                <li><a href="Employees.html"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
+                <li><a href="Payroll.html"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li>
+                <div class="active"></div>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <div class="title">Add New Employee</div>
+            <div class="content">
+                <form action="add_employees">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">First Name</span>
+                            <input type="text" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Last Name</span>
+                            <input type="text" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Phone Number</span>
+                            <input type="text" placeholder="Enter your number" required>
+                        </div>
+                    </div>
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">Gender</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

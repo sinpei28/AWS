@@ -19,6 +19,12 @@ body{
     background: #dff0f2ec;
 }
 
+#goodMorning{
+  margin-left: 15vw;
+  margin-top: 1vw;
+  font-size: 40px;
+}
+
 .side-nav {
     width: 250px;
     height: 100%;

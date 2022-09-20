@@ -266,50 +266,55 @@ input[type="date"]{
 }
 
 /* Select Department Box */
-form .selection {
-  height: 45px;
-  margin: 35px 0
-}
-
-form .selection span.department-title {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-form .selection .select-department .select {
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  width: 305px;
-  padding: 10px 20px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 500;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  background-color: #f7f7f7;
-  color: #ffffff;
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: 47px;
-  background-position: 247px 0.5px;
-  outline: none;
-}
-
-select::-ms-expand{
-  display: none;
-}
-
-select option{
-  background-color: #f7f7f7;
-  letter-spacing: 1.2px;
-  font-weight: 400;
+.department-title{
   font-size: 18px;
+  font-weight: 500;
 }
 
-.selected{
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  background: #f7f7f7;
+  background-image: none;
+  flex: 1;
+  padding: 0 15px;
+  color:#000000;
+  cursor:pointer;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+select::-ms-expand {
   display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 3em;
+  line-height: 3;
+  background: #f7f7f7;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #f7f7f7;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #74d1dbec;
 }
 
 /* Submit Button */

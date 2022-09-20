@@ -82,18 +82,17 @@
                         <input type="date">
                     </div>
                     
-                    <div class="selection">
-                        <span class="department-title">Department</span>
-                        <div class="select-department">
-                            <select>
-                                <option selected class="selected">Choose Department</i></option>
-                                <option>Accounting & Finance</options>
-                                <option>Human Resources</option>
-                                <option>Information Technology</option>
-                                <option>Marketing & Sales</option>
-                            </select>                               
-                        </div>    
-                    </div>
+                    <span class="department-title">Department</span>
+                    <div class="select">
+                        <select name="format" id="format">
+                           <option selected disabled>Choose Department</option>
+                           <option value="pdf">Accounting & Finance</option>
+                           <option value="txt">Human Resources</option>
+                           <option value="epub">Information Technology</option>
+                           <option value="fb2">Marketing & Sales</option>
+                           <option value="mobi">Research & Development</option>
+                        </select>
+                     </div>
 
                     <div class="button">
                         <input type="submit" value="Submit">

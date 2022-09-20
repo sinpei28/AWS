@@ -123,6 +123,7 @@ body{
   background: linear-gradient(135deg, #74d1dbec, #4bb8b8);
 }
 
+/* Input Field */
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +196,7 @@ form .category{
   display: flex;
   width: 80%;
   margin: 14px 0 ;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 form .category label{
@@ -209,6 +210,7 @@ form .category label .dot{
   height: 18px;
   width: 18px;
   border-radius: 50%;
+  margin-left: 20px;
   margin-right: 10px;
   background: #d9d9d9;
   border: 5px solid transparent;
@@ -228,30 +230,32 @@ form input[type="radio"]{
 /* Date of Birth Title */
 form .dob-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 480;
 }
 
 /* Select Date Box */
 form .date {
   height: 45px;
-  margin: 35px 0
+  margin: 35px 0;
+  margin-left: 340px;
+  margin-top: -80px;
 }
 
 input[type="date"]{
-  background-color: #74d1dbec;
-  padding: 12px;
+  background-color: #f2f2f2;
+  padding: 5px;
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
-  font-family: "Roboto Mono",monospace;
-  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
   font-size: 16px;
   border: none;
   outline: none;
-  border-radius: 5px;
-  margin-top: 260px;
-  margin-left: -100px;
+  margin-top: 30px;
+  margin-left: 65px;
+  position: static;
 }
 
 ::-webkit-calendar-picker-indicator{
@@ -262,44 +266,48 @@ input[type="date"]{
 }
 
 /* Select Department Box */
-select{
+form .selection {
+  height: 45px;
+  margin: 35px 0
+}
+
+form .selection span.department-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .selection .select-department .select {
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 305px;
   padding: 10px 20px;
-  font-family: 'Poppins',sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size: 20px;
   letter-spacing: 0.5px;
   cursor: pointer;
-  background-color: #74d1dbec;
+  background-color: #f7f7f7;
   color: #ffffff;
-  border: 6px solid #74d1dbec;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: 47px;
   background-position: 247px 0.5px;
   outline: none;
-  margin-top: 160px;
-  margin-left: 30px;
 }
+
 select::-ms-expand{
   display: none;
 }
-select:hover{
-  border: 6px solid #74d1dbec;
-}
+
 select option{
-  background-color: #74d1dbec;
+  background-color: #f7f7f7;
   letter-spacing: 1.2px;
   font-weight: 400;
   font-size: 18px;
 }
+
 .selected{
   display: none;
 }

@@ -285,23 +285,27 @@ select {
   padding: 0 15px;
   color:#000000;
   cursor:pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
-  
 }
+
 select::-ms-expand {
   display: none;
 }
+
 .select {
   position: relative;
   display: flex;
-  width: 15em;
-  height: 3em;
+  width: 12em;
+  height: 2.7em;
   line-height: 3;
   background: #f7f7f7;
   overflow: hidden;
   border-radius: .25em;
+  margin-top: 5px;
+  margin-left: -2px;
 }
+
 .select::after {
   content: '\25BC';
   position: absolute;

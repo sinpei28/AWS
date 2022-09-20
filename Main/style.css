@@ -100,10 +100,9 @@ body{
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
-  /* box-shadow: 0 5px 10px rgba(0,0,0,0.15); */
   margin-left: 35vw;
   margin-top: 3vh;
-  height: 100%;
+  height: 90%;
   
 }
 
@@ -186,6 +185,7 @@ input::placeholder{
   background-size: 100% 2px, 100% 2px, 100%;
 }
 
+/* Select Gender */
 form .gender-details .gender-title{
   font-size: 18px;
   font-weight: 500;
@@ -225,9 +225,16 @@ form input[type="radio"]{
   display: none;
 }
 
+/* Date of Birth Title */
 form .dob-title {
   font-size: 18px;
   font-weight: 500;
+}
+
+/* Select Date Box */
+form .date {
+  height: 45px;
+  margin: 35px 0
 }
 
 input[type="date"]{
@@ -243,8 +250,8 @@ input[type="date"]{
   border: none;
   outline: none;
   border-radius: 5px;
-  margin-top: 230px;
-  margin-left: -35px;
+  margin-top: 260px;
+  margin-left: -100px;
 }
 
 ::-webkit-calendar-picker-indicator{
@@ -254,6 +261,50 @@ input[type="date"]{
   border-radius: 3px;
 }
 
+/* Select Department Box */
+select{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 305px;
+  padding: 10px 20px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background-color: #74d1dbec;
+  color: #ffffff;
+  border: 6px solid #74d1dbec;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: 47px;
+  background-position: 247px 0.5px;
+  outline: none;
+  margin-top: 160px;
+  margin-left: 30px;
+}
+select::-ms-expand{
+  display: none;
+}
+select:hover{
+  border: 6px solid #74d1dbec;
+}
+select option{
+  background-color: #74d1dbec;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.selected{
+  display: none;
+}
+
+/* Submit Button */
 form .button{
   height: 45px;
   margin: 35px 0
@@ -271,7 +322,7 @@ form .button input{
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #74d1dbec;
-  margin-top: 125px;
+  margin-top: 40px;
 }
 
 form .button input:hover{

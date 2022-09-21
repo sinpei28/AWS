@@ -11,6 +11,6 @@ db_conn = connections.Connection(
     password='lab-password',
 )
 
-cursor = db_conn.cursor
+cursor = db_conn.cursor()
 cursor.execute("create database HRsystem")
 print(cursor)

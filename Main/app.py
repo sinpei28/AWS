@@ -34,7 +34,10 @@ def AddEmp():
     phoneNumber = request.form['phoneNumber']
     emergencyContactNumber = request.form['emergencyContactNumber']
     gender =  request.form['gender']
+    dob = request.form['dob']
     department = request.form['department']
+
+    print(firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
 
     insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
@@ -43,7 +46,7 @@ def AddEmp():
     # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
     # db_conn.commit()
 
-    # return render_template('AddEmpOutput.html', name=emp_name)
+    return render_template('Payroll.html', name=emp_name)
 
 
 # cursor.execute("create database HRsystem")

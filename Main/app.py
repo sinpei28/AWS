@@ -17,6 +17,8 @@ cursor = db_conn.cursor()
 # createTableEmployees = "CREATE TABLE Employees (firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(15), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (firstName))"
 # cursor.execute(createTableEmployees)
 cursor.execute("SHOW TABLES")
+for x in cursor:
+    print(x)
 
 @app.route("/", methods=['GET', 'POST'])
 def home():

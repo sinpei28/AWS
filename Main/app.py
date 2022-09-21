@@ -12,9 +12,7 @@ db_conn = connections.Connection(
     db = 'HR'
 )
 
-cursor = db_conn.cursor()
-# cursor.execute("create database HRsystem")
-# print(cursor)
+# cursor = db_conn.cursor()
 
 createTableEmployees = "CREATE TABLE Employees (firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(15), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primaryKey (firstName))"
 cursor.execute(createTableEmployees)
@@ -24,3 +22,5 @@ print(cursor.fetchall()) # retrieving the list of table
 def home():
     return render_template('index.html')
 
+# cursor.execute("create database HRsystem")
+# print(cursor)

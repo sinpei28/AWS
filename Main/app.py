@@ -9,8 +9,13 @@ db_conn = connections.Connection(
     port=3306,
     user='main',
     password='lab-password',
+    db = 'hr-database'
 )
 
-cursor = db_conn.cursor()
-cursor.execute("create database HRsystem")
-print(cursor)
+@app.route("/", methods=['GET', 'POST'])
+def home():
+    return render_template('index.html')
+
+# cursor = db_conn.cursor()
+# cursor.execute("create database HRsystem")
+# print(cursor)

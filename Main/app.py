@@ -7,8 +7,8 @@ app = Flask(__name__)
 db_conn = connections.Connection(
     host='hr-database.cleurfoto8r2.us-east-1.rds.amazonaws.com',
     port=3306,
-    user='HR-Database',
-    password='hr-password',
+    user='main',
+    password='lab-password',
 )
 
 cursor = db_conn.cursor

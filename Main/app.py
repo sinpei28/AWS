@@ -46,8 +46,11 @@ def AddEmp():
     # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
     # db_conn.commit()
 
-    return render_template('Payroll.html', name=emp_name)
+    return render_template('Payroll.html')
 
 
 # cursor.execute("create database HRsystem")
 # print(cursor)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)

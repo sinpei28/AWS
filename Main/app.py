@@ -16,6 +16,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route("/payroll")
+def payroll():
+    return render_template('Payroll.html')
+
 # cursor = db_conn.cursor()
 
 # createTableEmployees = "CREATE TABLE Employees (firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(15), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (firstName))"

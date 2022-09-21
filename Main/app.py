@@ -28,28 +28,28 @@ def payroll():
 # for x in cursor:
 #     print(x)
 
-# @app.route("/add_employees", methods=['POST'])
-# def AddEmp():
-#     firstName = request.form['firstName']
-#     lastName = request.form['last_name']
-#     email = request.form['email']
-#     currentAddress = request.form['currentAddress']
-#     phoneNumber = request.form['phoneNumber']
-#     emergencyContactNumber = request.form['emergencyContactNumber']
-#     gender =  request.form['gender']
-#     dob = request.form['dob']
-#     department = request.form['department']
+@app.route("/add_employees", methods=['POST'])
+def AddEmp():
+    firstName = request.form['firstName']
+    lastName = request.form['last_name']
+    email = request.form['email']
+    currentAddress = request.form['currentAddress']
+    phoneNumber = request.form['phoneNumber']
+    emergencyContactNumber = request.form['emergencyContactNumber']
+    gender =  request.form['gender']
+    dob = request.form['dob']
+    department = request.form['department']
 
-#     print(firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
+    print(firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
 
-#     insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
-#     cursor = db_conn.cursor()
-#     print(insert_sql)
+    # insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
+    # cursor = db_conn.cursor()
+    # print(insert_sql)
 
-#     # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
-#     # db_conn.commit()
+    # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
+    # db_conn.commit()
 
-#     return render_template('Payroll.html')
+    return render_template('Payroll.html')
 
 
 # cursor.execute("create database HRsystem")

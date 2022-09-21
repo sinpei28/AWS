@@ -4,13 +4,13 @@ from datetime import date
 
 app = Flask(__name__)
 
-# db_conn = connections.Connection(
-#     host='hr-database.cleurfoto8r2.us-east-1.rds.amazonaws.com',
-#     port=3306,
-#     user='main',
-#     password='lab-password',
-#     db = 'HR'
-# )
+db_conn = connections.Connection(
+    host='hr-database.cleurfoto8r2.us-east-1.rds.amazonaws.com',
+    port=3306,
+    user='main',
+    password='lab-password',
+    db = 'HR'
+)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -42,9 +42,21 @@ def AddEmp():
 
     print(firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
 
-    # insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
-    # cursor = db_conn.cursor()
-    # print(insert_sql)
+    insert_sql = "INSERT INTO Employees VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    cursor = db_conn.cursor()
+
+    try:
+        cursor.execute(insert_sql, (firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
+        db_conn.commit()
+
+        select_query = "Select * from Employees"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+
+        print(records)
+
+    finally:
+        cursor.close()
 
     # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
     # db_conn.commit()

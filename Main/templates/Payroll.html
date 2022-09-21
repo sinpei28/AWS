@@ -5,14 +5,14 @@
     <title>Employees Information</title>
     <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 </head>
 
 <body>
     <div class="header">
         <div class="side-nav">
             <a href="#" class="logo">
-                <img src="logo.png" width="40" height="40">
+                <img src="{{ url_for('static', filename='logo.png')}}" width="40" height="40">
             </a>
             <ul class="nav-links">
                 <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="title">Payroll Details</div>
             <div class="content">
-                <form action="/payroll" method="post">
+                <form action="/payroll_search" method="post">
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">First Name</span>

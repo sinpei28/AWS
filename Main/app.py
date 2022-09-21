@@ -31,7 +31,7 @@ def payroll():
 @app.route("/add_employees", methods=['POST'])
 def AddEmp():
     firstName = request.form['firstName']
-    lastName = request.form['last_name']
+    lastName = request.form['lastName']
     email = request.form['email']
     currentAddress = request.form['currentAddress']
     phoneNumber = request.form['phoneNumber']

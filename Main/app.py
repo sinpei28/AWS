@@ -9,7 +9,7 @@ db_conn = connections.Connection(
     port=3306,
     user='main',
     password='lab-password',
-    db = 'hr-database'
+    db = 'HR'
 )
 
 @app.route("/", methods=['GET', 'POST'])

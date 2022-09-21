@@ -14,6 +14,12 @@ db_conn = connections.Connection(
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
+
+    cursor = db_conn.cursor()
+    cursor.execute(alter_email)
+    print('Altered Email Column')
+
     return render_template('index.html')
 
 @app.route("/payroll")
@@ -46,9 +52,11 @@ def AddEmp():
     cursor = db_conn.cursor()
 
     try:
+        # write data
         cursor.execute(insert_sql, (firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
         db_conn.commit()
 
+        # read data
         select_query = "Select * from Employees"
         cursor.execute(select_query)
         records = cursor.fetchall()

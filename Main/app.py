@@ -25,6 +25,15 @@ def index():
     cursor.execute("SHOW TABLES")
     for x in cursor:
         print(x)
+
+    dropTable = 'DROP TABLE Employees'
+    cursor.execute(dropTable)
+    print('drop successfully')
+    cursor.execute("SHOW TABLES")
+    for x in cursor:
+        print(x)
+
+
     # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
 
     # cursor = db_conn.cursor()

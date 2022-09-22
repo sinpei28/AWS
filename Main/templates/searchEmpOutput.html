@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="searchEmpOutput.css">
-    <title>Employee Information</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Show Employee's Information</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='searchEmp.css')}}">
+	<!-- <link rel="stylesheet" href="searchEmp.css"> -->
+	
 </head>
 
 <body>
+	<div class="header">
+        <div class="side-nav">
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='logo.png')}}" width="40" height="40">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
+                <li><a href="{{ url_for('searchEmp')}}"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li>
+                <div class="active"></div>
+            </ul>
+        </div>
     
     <div class="emp-output-container">
         
-        <div class="title">Show Employee</div>
+        <div class="title">Employee's Information</div>
         
         <div class="content">
             

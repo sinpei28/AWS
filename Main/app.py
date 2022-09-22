@@ -117,7 +117,7 @@ def AddEmp():
     # return render_template('searchEmp.html')
     return redirect(url_for('addSuccess'))
 
-@app.route("/addSuccess", methods=['POST'])
+@app.route("/addSuccess")
 def addSuccess():
     cursor = db_conn.cursor()
 

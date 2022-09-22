@@ -10,8 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
     
-     <!-- <link rel="stylesheet" href="style.css">  -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+     <link rel="stylesheet" href="style.css">  
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> -->
 </head>
 
 <body>
@@ -25,11 +25,12 @@
                 <img src="bcts.png" width="180" height="60"> 
             </a>
             <ul class="nav-links">
-                <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
-                <li><a href="{{ url_for('searchEmp')}}"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li>
+                <!-- <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
+                <li><a href="{{ url_for('searchEmp')}}"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li> -->
 
-                <!-- <li><a href="index.html"fa-solid fa-user"></i><p stylwe="color:black">Employees</p></a></li> -->
-                <!-- <li><a href="Payroll.html"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li> -->
+                <li><a href="index.html"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
+                <li><a href="searchEmp.html"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+                <li><a href="deleteEmp.html"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
                 <div class="active"></div>
             </ul>
         </div>

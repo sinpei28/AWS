@@ -11,7 +11,8 @@
 
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='employee_successful.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='employee_successful.css')}}"> -->
+    <link rel="stylesheet" href="emp_successful.css">
 </head>
 
 <body>
@@ -26,14 +27,14 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="{{ url_for('index')}}"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
-                <li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
-                <li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
+                <li><a href="index.html"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
+                <li><a href="searchEmp.html"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+                <li><a href="deleteEmp.html"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li> 
 
                 <div class="active"></div>
             </ul>
         </div>
-
+    
         <div class="container">
             
             
@@ -51,13 +52,12 @@
 
                     <h3>{{result[1] + ' ' + result[2]}}</h3>
                 </div>
-                
+
                 <div id="Details">
                     <table style="border-collapse: collapse; width: 100%;">
                 <tbody>
                 <tr>
-                <td colspan="2"><a>Employee ID</a></td>
-                <td>{{result[0]}}</td>
+                <td colspan="2"><a>{{result[0]}}</a></td>
                 </tr>
                 <!-- <tr>
                     <td style="width: 50%;">&nbsp; Name</td>

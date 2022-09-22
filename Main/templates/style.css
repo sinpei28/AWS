@@ -4,14 +4,25 @@
   box-sizing: border-box;
 }
 
-body{
+/* body{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   background: #dff0f2ec;
+} */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+  background: #dff0f2ec;
 }
+
 
 .header {
   width: 100%;
@@ -99,7 +110,7 @@ body{
   top: 73.0%;
 }
 
-.container{
+/* .container{
   max-width: 700px;
   width: 100%;
   background-color: #fff;
@@ -108,6 +119,19 @@ body{
   margin-left: 35vw;
   margin-top: 3vh;
   height:95%; 
+} */
+
+.container {
+  background-color: #fff;
+  padding: 20px 1px;
+  max-width: 850px;
+  width: 100%;
+  margin-left: 30vw;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  /* height: 1400px; */
+  overflow: auto;
+  border-radius: 5px;
 }
 
 .container .title{
@@ -352,7 +376,7 @@ form .button{
 
 form .button input{
   height: 100%;
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   border: none;
   color: #fff;

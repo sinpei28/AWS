@@ -259,6 +259,7 @@ input[type="date"]{
   margin-top: 25px;
   margin-left: 70px;
   position: static;
+  border-radius: 5px;
 }
 
 ::-webkit-calendar-picker-indicator{

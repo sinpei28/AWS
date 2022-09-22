@@ -14,11 +14,11 @@ db_conn = connections.Connection(
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
+    # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
 
-    cursor = db_conn.cursor()
-    cursor.execute(alter_email)
-    print('Altered Email Column')
+    # cursor = db_conn.cursor()
+    # cursor.execute(alter_email)
+    # print('Altered Email Column')
 
     return render_template('index.html')
 

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Employee</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<!-- <div class="cart" style="margin-bottom:10px; margin-right:auto; margin-left:auto ">
+    <table>
+        <tbody><tr>
+            <th width="400"><div class="div"><b>Products</b></div></th>
+            <th width="200"><div class="div">Size</div></th>
+            <th width="200"><div class="div">Unit Price</div></th>
+            <th width="200"><div class="div">Comment</div></th>
+            <th width="200"><div class="div">Quantity</div></th>
+            <th width="200"><div class="div">Price</div></th>
+        </tr>
+
+            <!-- <script type="text/javascript">
+                let storagekey = Object.keys(localStorage);
+                
+                let total = 0;
+
+                for (let i = 0; i < storagekey.length; i++) {
+                let data = JSON.parse(localStorage.getItem(storagekey[i]));
+                    
+                    document.write("<form action='../payment/payment.html'><tr><td>");
+                    
+                    document.write(data.name);
+                    document.write("</td><td>");
+
+                    document.write(data.size);
+                    document.write("</td><td>");
+
+                    document.write(data.price );
+                    document.write("</td><td>");
+
+                    document.write(data.cmt);
+                    document.write("</td><td>");
+
+                    document.write(data.qty);
+                    document.write("</td><td>");
+                    
+                
+                } 
+                
+                
+                document.write("<tr style='text-align: left;'><td >");
+                document.write("Total: ");
+                document.write("<input type='text' name='total' id='total' disabled='disabled' >");
+                document.getElementById("total").value += total.toFixed(2);
+                document.write("<td colspan='5' style='text-align:right;'><button class='checkout'>");
+                document.write("CHECKOUT ");
+                document.write("</button></td></tr></form>");
+                                        
+                
+            </script><tr style="text-align: left;"><td>Total: <input type="text" name="total" id="total" disabled="disabled"></td><td colspan="5" style="text-align:right;"><button class="checkout">CHECKOUT </button></td></tr> -->
+
+    <!-- </tbody></table>
+</div> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table with database</title>
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+color: #588c7e;
+font-family: monospace;
+font-size: 25px;
+text-align: left;
+}
+th {
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #dff0f2ec;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: #dff0f2ec;
+}
+
+#goodMorning{ 
+  margin-left: 17rem;
+  margin-top: 2vh;
+  font-size: 40px;
+}
+
+.side-nav {
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 130px;
+}
+
+.nav-links {
+  list-style: none;
+  position: relative;
+}
+
+.nav-links li {
+  padding: 10px 0;
+}
+
+.nav-links li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.nav-links li a i {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.active {
+  background: #fff;
+  width: 100%;
+  height: 47px;
+  position: absolute;
+  left: 0;
+  top: 2.8%;
+  z-index: -1;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px #74d1dbec;
+  display: none;
+  transition: top 0.2s;
+}
+
+.nav-links li:hover a {
+  color: #2938c3;
+  transition: 0.3s;
+}
+
+.nav-links li:hover ~ .active {
+  display: block;
+}
+
+.nav-links li:nth-child(1):hover ~ .active {
+  top: 5.0%;
+}
+
+.nav-links li:nth-child(2):hover ~ .active {
+  top: 55.0%;
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-left: 35vw;
+  margin-top: 3vh;
+  height:95%; 
+}
+
+.container .title{
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #74d1dbec, #4bb8b8);
+}
+
+
+</style>
+
+<body>
+    <div class="header">
+        
+        <h1 id="goodMorning">Good Morning, admin !</h1>
+        
+        <div class="side-nav">
+            <a href="#" class="logo">
+                <img src="aa.png" width="180" height="60">
+                <!-- <img src="aa.png" width="180" height="60"> -->
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
+                <li><a href="{{ url_for('payroll')}}"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li>
+
+                <div class="active"></div>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <div class="title">Add New Employee</div>
+            <div class="content">
+            
+                <body>
+                    <table>
+                    <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    </tr>
+
+                    
+                    <!-- <?php
+                    $conn = mysqli_connect("localhost", "root", "", "company");
+                    // Check connection
+                    if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                    }
+                    $sql = "SELECT id, username, password FROM login";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
+                    . $row["password"]. "</td></tr>";
+                    }
+                    echo "</table>";
+                    } else { echo "0 results"; }
+                    $conn->close();
+                    ?> -->
+                    </table>
+                    
+          
+                
+            </div>
+            
+        </div>
+        
+    </div>    
+    
+</body>
+
+
+</html>

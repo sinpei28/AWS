@@ -55,7 +55,7 @@ def AddEmp():
 
     try:
         # write data
-        cursor.execute(insert_sql, (firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
+        cursor.execute(insert_sql, (employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
         db_conn.commit()
 
         # read data

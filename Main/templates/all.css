@@ -94,8 +94,8 @@
     top: 55.0%;
   }
   
-  .container{
-    max-width: 700px;
+ .container{
+    max-width: 300px;
     width: 100%;
     background-color: #fff;
     padding: 25px 30px;
@@ -121,68 +121,3 @@
     border-radius: 5px;
     background: linear-gradient(135deg, #74d1dbec, #4bb8b8);
   }
-
-
-/* all about the display of the employee  */
-
-#Personal h2 {
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-#Personal {
-  border: 5px;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  }
-
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-.ProfilePic {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
-}
-
-#Personal h3 {
-  margin: 30px auto -20px auto;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 50%;
-  background-color: #74d1dbec;
-}
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-#Details a {
-  font-size: 1.20em;
-  font-weight: bold;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-top: 25px;
-  padding-bottom: 5px;
-}
-
-

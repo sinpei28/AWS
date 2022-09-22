@@ -116,8 +116,17 @@
                         <input type=file name="imageFile" style="height:25px;font: size 13px;color:black;"> <br><br>
                     </div>
                     
+                    <script>
+                        myFunction = function() {
+                        var first = document.getElementById("firstname").value;
+                        var second = document.getElementById("lastname").value;
+                    
+                        document.getElementById("here").innerHTML = first+" "+second;
+                    }
+                    </script>
+
                     <div class="button">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" onclick="myFunction()">
                     </div>
                     
                     

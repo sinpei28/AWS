@@ -48,6 +48,7 @@ def AddEmp():
     dob = request.form['dob']
     department = request.form['department']
 
+    print('The data capture from the website : ')
     print(employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
 
     insert_sql = "INSERT INTO Employees VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"

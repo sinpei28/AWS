@@ -30,37 +30,50 @@
 					<div class="active"></div>
 				</ul>
 			</div>
+		</div>
+	</div>		
+			
+	<div class="getemp-container">
+				
+		<div class="title">Enter Employee's ID</div>
+		
+		<div class="content">
 			
 			<div class="getemp-container">
-				
+
 				<div class="title">Enter Employee's ID</div>
 				
 				<div class="content">
 					
-					<form id="search-content">
-						<input type="text" name="input" class="input" id="search-input">
-						<button type="reset" class="search" id="search-btn"></button>
+					<form action="/fetchdata" autocomplete="on" method="POST">
+						
+						<div class="emp-id">
+							
+							<div class="id-input-box">
+								
+								<span class="emp-id-details">Employee's ID: </span>
+								<input type="text"  placeholder="Please enter the id" required>
+								
+							</div>
+							
+						</div>
+						
+						<div class="button">
+							<input type="submit" value="Fetch Info">
+						</div>
+					
 					</form>
 					
-					<script>
-						const input = document.getElementById("search-input");
-						const searchBtn = document.getElementById("search-btn");
-						
-						const expand = () => {
-							searchBtn.classList.toggle("close");
-							input.classList.toggle("square");
-						};
-						
-						searchBtn.addEventListener("click", expand);	
-					</script>
-					
-				</div>	
-				
+				</div>
 			</div>
 			
-		</div>
+		</div>	
 		
 	</div>
+			
+		
+		
+	
 	
 </body>
 

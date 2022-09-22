@@ -322,9 +322,17 @@ select::-ms-expand {
 }
 
 /* Image Input */
+form .image {
+  margin-top: 20px;
+}
+
 .img-title{
   font-size: 18px;
   font-weight: 500;
+}
+
+input[type=file] {
+  margin-top: 5px;
 }
 
 /* Submit Button */

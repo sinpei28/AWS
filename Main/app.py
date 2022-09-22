@@ -116,7 +116,7 @@ def AddEmp():
     # add succesfully pages 
     return render_template('searchEmp.html')
 
-@app.route("/searchEmp", methods=['POST'])
+@app.route("/searchEmployee", methods=['POST'])
 def searchEmp():
     return render_template('searchEmp.html')
 

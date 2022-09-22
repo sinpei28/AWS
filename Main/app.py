@@ -118,21 +118,22 @@ def AddEmp():
 
 @app.route("/searchEmployee")
 def searchEmp():
-    print('Hello')
     return render_template('searchEmp.html')
 
 @app.route("/deleteEmployee")
 def deleteEmp():
     return 'Deleting Employee'
 
-# # seacrhSpecificEmployeeID
-# @app.route("/searchEmployee", methods=['POST'])
-# def searchEmployee():
-#     employeeID = request.form['employeeID']
+# seacrhSpecificEmployeeID
+@app.route("/searchEmployee", methods=['POST'])
+def searchEmployee():
+    employeeID = request.form['employeeID']
 
-#     records = searchEmployeeRecordsFromRDS(employeeID)
+    # records = searchEmployeeRecordsFromRDS(employeeID)
+    print(employeeID)
 
-#     return render_template('searchEmpOutput.html', result=records)
+    return render_template('searchEmpOutput.html')
+    # , result=records
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

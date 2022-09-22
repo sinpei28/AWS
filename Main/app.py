@@ -120,9 +120,6 @@ def AddEmp():
 def searchEmp():
     return render_template('searchEmp.html')
 
-@app.route("/deleteEmployee")
-def deleteEmp():
-    return 'Deleting Employee'
 
 # seacrhSpecificEmployeeID
 @app.route("/searchedEmployee", methods=['POST'])
@@ -132,7 +129,12 @@ def searchEmployee():
     records = searchEmployeeRecordsFromRDS(employeeID)
     # print(employeeID)
 
-    return render_template('searchEmpOutput.html', result=records)
+    # return render_template('searchEmpOutput.html', result=records)
+    return str(records)
 
+@app.route("/deleteEmployee")
+def deleteEmp():
+    return 'Deleting Employee'
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

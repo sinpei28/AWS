@@ -115,7 +115,7 @@ def AddEmp():
     
     # add succesfully pages 
     # return render_template('searchEmp.html')
-    return redirect(url_for(addSuccess))
+    return redirect(url_for('addSuccess'))
 
 @app.route("/addSuccess", methods=['POST'])
 def addSuccess():

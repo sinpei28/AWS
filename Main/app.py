@@ -1,4 +1,4 @@
-from unittest import result
+from crypt import methods
 from flask import Flask, render_template, request
 from pymysql import connections
 from datetime import date
@@ -132,9 +132,19 @@ def searchEmployee():
     # return render_template('searchEmpOutput.html', result=records)
     return str(records)
 
-@app.route("/deleteEmployee")
+@app.route("/deleteEmployee", methods=['POST'])
 def deleteEmp():
+    cursor = db_conn.cursor()
+    employeeID = request.form['employeeID']
+
+    delete_statement = "DELETE FROM Employees WHERE employeeID = %s"
+
+    cursor.execute(delete_statement, (employeeID))
+
+    db_conn.commit()
+    cursor.close()
+
     return 'Deleting Employee'
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

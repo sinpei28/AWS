@@ -27,16 +27,21 @@ def index():
     for x in cursor:
         print(x)
 
+    # read data from RDS
+        select_query = "Select * from Employees"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+        print(records)
+
     # delete_record = "DELETE FROM Employees"
 
     # cursor.execute(delete_record)
     # print('Delete records')
     # db_conn.commit()    
 
-    # alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)'
-
-    # cursor.execute(alter_department)
-    # print('Altered department Column')
+    # alter_link = 'ALTER TABLE Employees ADD COLUMN imageFile varchar(80)'
+    # cursor.execute(alter_link)
+    # print('Add link column')
 
     return render_template('index.html')
 
@@ -61,24 +66,18 @@ def AddEmp():
     print('The data capture from the website : ')
     print(employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
 
-    insert_sql = "INSERT INTO Employees VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
     if imageFile.filename == "":
         return "Please select a file"
 
     try:
-        # write data into RDS
-        cursor.execute(insert_sql, (employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
-        db_conn.commit()
-
         # read data from RDS
         select_query = "Select * from Employees"
         cursor.execute(select_query)
         records = cursor.fetchall()
         print(records)
 
-        
         # S3
         emp_name = "" + firstName + " " + lastName
         # Uplaod image file in S3 #
@@ -104,18 +103,17 @@ def AddEmp():
 
         except Exception as e:
             return str(e)
+        
+        # write data into RDS
+        insert_sql = "INSERT INTO Employees VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+
+        cursor.execute(insert_sql, (employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department, object_url))
+        db_conn.commit()
 
     finally:
         cursor.close()
 
-    # cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
-    # db_conn.commit()
-
     return render_template('Payroll.html')
-
-
-# cursor.execute("create database HRsystem")
-# print(cursor)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

@@ -44,12 +44,12 @@
                     <hr>
 
                     <a href="#" class="ProfilePic">
-                    <img src="{{ url_for('static', filename='OIP.jpg')}}" alt="profile-picture"  width="190" height="180"> 
+                    <img src="{{result[10]}}" alt="profile-picture"  width="190" height="210"> 
                     <!-- if image cannot be displaed alt  
                     border="5"-->
                     </a>
 
-                    <h3>Name</h3>
+                    <h3>{{result[1] + ' ' + result[2]}}</h3>
                 </div>
                 
                 <div id="Details">
@@ -59,16 +59,16 @@
                 <td colspan="2"><a>Employee ID</a></td>
                 <td>{{result[0]}}</td>
                 </tr>
-            
+                <!-- <tr>
+                    <td style="width: 50%;">&nbsp; Name</td>
+                    <td><div id="here">{{result[1] + ' ' + result[2]}}</div></td>
+                </tr> -->
+                
                 <tr>
                 <td style="width: 50%;">&nbsp; Email</td>
                 <td>{{result[3]}}</td>
                 </tr> 
 
-                <tr>
-                    <td style="width: 50%;">&nbsp; Name</td>
-                    <td><div id="here">{{result[1] + ' ' + result[2]}}</div></td>
-                </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Contact Number</td>
                     <td>{{result[5]}}</td>

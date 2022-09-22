@@ -114,7 +114,20 @@ def AddEmp():
         cursor.close()
     
     # add succesfully pages 
-    return render_template('searchEmp.html')
+    # return render_template('searchEmp.html')
+
+@app.route("/addSuccess", methods=['POST'])
+def addSuccess():
+    cursor = db_conn.cursor()
+
+    select_query = "Select * from Employees"
+    cursor.execute(select_query)
+    records = cursor.fetchall()
+    print(records)
+
+    result = records[-1]
+
+    return render_template('empSuccess.html', result=result)
 
 @app.route("/searchEmployee")
 def searchEmp():

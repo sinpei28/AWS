@@ -12,6 +12,9 @@ db_conn = connections.Connection(
     db = 'HR'
 )
 
+custombucket = 'tantzexuan-bucket'
+customregion = 'us-east-1'
+
     # createTableEmployees = "CREATE TABLE Employees (employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (employeeID))"
     # cursor.execute(createTableEmployees)
 
@@ -47,6 +50,7 @@ def AddEmp():
     gender =  request.form['gender']
     dob = request.form['dob']
     department = request.form['department']
+    imageFile = request.files['imageFile']
 
     print('The data capture from the website : ')
     print(employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department)
@@ -55,16 +59,41 @@ def AddEmp():
     cursor = db_conn.cursor()
 
     try:
-        # write data
+        # write data into RDS
         cursor.execute(insert_sql, (employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
         db_conn.commit()
 
-        # read data
+        # read data from RDS
         select_query = "Select * from Employees"
         cursor.execute(select_query)
         records = cursor.fetchall()
-
         print(records)
+
+        # S3
+        emp_name = "" + firstName + " " + lastName
+        # Uplaod image file in S3 #
+        emp_image_file_name_in_s3 = "emp-id-" + str(employeeID) + "_image_file"
+        s3 = boto3.resource('s3')
+
+        try:
+            print("Data inserted in MySQL RDS... uploading image to S3...")
+            s3.Bucket(custombucket).put_object(Key=emp_image_file_name_in_s3, Body=imageFile)
+            bucket_location = boto3.client('s3').get_bucket_location(Bucket=custombucket)
+            s3_location = (bucket_location['LocationConstraint'])
+
+            if s3_location is None:
+                s3_location = ''
+            else:
+                s3_location = '-' + s3_location
+
+            object_url = "https://s3{0}.amazonaws.com/{1}/{2}".format(
+                s3_location,
+                custombucket,
+                emp_image_file_name_in_s3)
+            print("Image Stored location : ", object_url)
+
+        except Exception as e:
+            return str(e)
 
     finally:
         cursor.close()

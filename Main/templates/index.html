@@ -10,8 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
     
-    <!-- <link rel="stylesheet" href="style.css">  -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+     <link rel="stylesheet" href="style.css"> 
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> -->
 </head>
 
 <body>
@@ -21,8 +21,7 @@
         
         <div class="side-nav">
             <a href="#" class="logo">
-                <img src="{{ url_for('static', filename='logo.png')}}" width="40" height="40">
-                <!-- <img src="aa.png" width="180" height="60"> -->
+                <img src="{{ url_for('static', filename='aa.png')}}" width="180" height="60"> 
             </a>
             <ul class="nav-links">
                 <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
@@ -40,7 +39,7 @@
                 <form action="/add_employees" method="post" enctype=multipart/form-data> 
                     <div class="user-details">
                         <div class="input-box">
-                            <span class="details">Emplpoyee ID</span>
+                            <span class="details">Employee's ID</span>
                             <input type="text" name="employeeID" id="generate-id" placeholder="Enter employee id" required>
                         </div>
                         

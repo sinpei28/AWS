@@ -157,11 +157,10 @@ form .input-box span.details{
   appearance: none;
   background : #f2f2f2;
   padding: 12px;
-  border-radius: 3px;
+  border-radius: 10px;
   width: 250px;
   outline :none;
   font-size : 13px;
-  border-radius: 0;
   border-top-left-radius: 3px;
   border-top-left-radius: 3px;
   background :
@@ -203,13 +202,13 @@ form .category label{
   align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
+  padding-right: 60px;
 }
 
 form .category label .dot{
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  margin-left: 20px;
   margin-right: 10px;
   background: #d9d9d9;
   border: 5px solid transparent;
@@ -327,7 +326,7 @@ select::-ms-expand {
 
 /* Image Input */
 form .image {
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .img-title{

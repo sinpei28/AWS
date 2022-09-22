@@ -10,6 +10,17 @@
 </head>
 
 <body>
+	<div class="header">
+        <div class="side-nav">
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='logo.png')}}" width="40" height="40">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i><p style="color:black">Employees</p></a></li>
+                <li><a href="{{ url_for('searchEmp')}}"><i class="fa-solid fa-money-check-dollar"></i><p style="color:black">Payroll</p></a></li>
+                <div class="active"></div>
+            </ul>
+        </div>
 	
 	<div class="getemp-container">
 

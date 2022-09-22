@@ -127,7 +127,7 @@ def searchEmployee():
     employeeID = request.form['employeeID']
 
     records = searchEmployeeRecordsFromRDS(employeeID)
-    # print(employeeID)
+    print(records)
 
     # return render_template('searchEmpOutput.html', result=records)
     return str(records)

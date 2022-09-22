@@ -26,12 +26,9 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="{{ url_for('index')}}"><i class="fa-solid fa-user"></i>
-                        <p style="color:black">Employees</p>
-                    </a></li>
-                <li><a href="{{ url_for('payroll')}}"><i class="fa-solid fa-money-check-dollar"></i>
-                        <p style="color:black">Payroll</p>
-                    </a></li>
+                <li><a href="{{ url_for('index')}}"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
+                <li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+                <li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
 
                 <div class="active"></div>
             </ul>
@@ -47,7 +44,7 @@
                     <hr>
 
                     <a href="#" class="ProfilePic">
-                    <img src="OIP.jpg" alt="profile-picture"  width="190" height="180"> 
+                    <img src="{{ url_for('static', filename='OIP.jpg')}}" alt="profile-picture"  width="190" height="180"> 
                     <!-- if image cannot be displaed alt  
                     border="5"-->
                     </a>

@@ -128,9 +128,9 @@ def searchEmployee():
     print(employeeID)
 
     records = searchEmployeeRecordsFromRDS(employeeID)
+    result = records[0]
 
-    # return render_template('searchEmpOutput.html', result=records)
-    return str(records)
+    return render_template('employee_success.html', result=result)
 
 
 @app.route("/deleteEmployee", methods=['POST'])

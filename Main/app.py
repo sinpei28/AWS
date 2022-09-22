@@ -20,8 +20,8 @@ customregion = 'us-east-1'
 def searchEmployeeRecordsFromRDS (employeeID) :
     cursor = db_conn.cursor()
 
-    seacrhQuery = ('SELECT * FROM Employees WHERE employeeID = %s', employeeID)
-    cursor.execute(seacrhQuery)
+    seacrhQuery = "SELECT * FROM Employees WHERE employeeID = %s"
+    cursor.execute(seacrhQuery, employeeID)
 
     searchRecords = cursor.fetchall()
     print(searchRecords)

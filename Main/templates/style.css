@@ -102,7 +102,7 @@ body{
   border-radius: 5px;
   margin-left: 35vw;
   margin-top: 3vh;
-  height: 85%;
+  height:115%;
   
 }
 
@@ -319,6 +319,12 @@ select::-ms-expand {
 }
 .select:hover::after {
   color: #74d1dbec;
+}
+
+/* Image Input */
+.img-title{
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* Submit Button */

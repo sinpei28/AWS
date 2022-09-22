@@ -1,3 +1,4 @@
+from unittest import result
 from flask import Flask, render_template, request
 from pymysql import connections
 from datetime import date
@@ -16,8 +17,17 @@ db_conn = connections.Connection(
 custombucket = 'tantzexuan-bucket'
 customregion = 'us-east-1'
 
-    # createTableEmployees = "CREATE TABLE Employees (employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (employeeID))"
-    # cursor.execute(createTableEmployees)
+def searchEmployeeRecordsFromRDS (employeeID) :
+    cursor = db_conn.cursor()
+
+    seacrhQuery = ('SELECT * FROM Employees WHERE employeeID = %s', employeeID)
+    cursor.execute(seacrhQuery)
+
+    searchRecords = cursor.fetchall()
+    print(searchRecords)
+
+    return searchRecords
+    
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -32,16 +42,6 @@ def index():
         cursor.execute(select_query)
         records = cursor.fetchall()
         print(records)
-
-    # delete_record = "DELETE FROM Employees"
-
-    # cursor.execute(delete_record)
-    # print('Delete records')
-    # db_conn.commit()    
-
-    # alter_link = 'ALTER TABLE Employees ADD COLUMN imageFile varchar(80)'
-    # cursor.execute(alter_link)
-    # print('Add link column')
 
     return render_template('index.html')
 
@@ -112,8 +112,18 @@ def AddEmp():
 
     finally:
         cursor.close()
+    
+    # add succesfully pages 
+    return render_template('searchEmp.html')
 
-    return render_template('Payroll.html')
+# seacrhSpecificEmployeeID
+@app.route("/seacrhEmployee", methods=['POST'])
+def seacrhEmployee():
+    employeeID = request.form['employeeID']
+
+    records = searchEmployeeRecordsFromRDS(employeeID)
+
+    return render_template('searchEmpOutput.html', result=records)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

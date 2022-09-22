@@ -3,7 +3,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Get Employee Information</title>
-	<link rel="stylesheet" href="searchEmp.css">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='searchEmp.css')}}">
+	<!-- <link rel="stylesheet" href="searchEmp.css"> -->
 	
 </head>
 
@@ -15,14 +17,14 @@
 		
 		<div class="content">
 			
-			<form action="/fetchdata" autocomplete="on" method="POST">
+			<form action="/seacrhEmployee" autocomplete="on" method="POST">
 				
 				<div class="emp-id">
 					
 					<div class="id-input-box">
 						
 						<span class="emp-id-details">Employee's ID: </span>
-						<input type="text"  placeholder="Please enter the id" required>
+						<input type="text" name="employeeID" placeholder="Please enter the id" required>
 						
 					</div>
 

@@ -125,15 +125,14 @@ def deleteEmp():
     return 'Deleting Employee'
 
 # seacrhSpecificEmployeeID
-@app.route("/searchEmployee", methods=['POST'])
+@app.route("/searchedEmployee", methods=['POST'])
 def searchEmployee():
     employeeID = request.form['employeeID']
 
-    # records = searchEmployeeRecordsFromRDS(employeeID)
-    print(employeeID)
+    records = searchEmployeeRecordsFromRDS(employeeID)
+    # print(employeeID)
 
-    return render_template('searchEmpOutput.html')
-    # , result=records
+    return render_template('searchEmpOutput.html', result=records)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

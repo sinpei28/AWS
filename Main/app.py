@@ -1,5 +1,5 @@
 from crypt import methods
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from pymysql import connections
 from datetime import date
 import boto3
@@ -115,6 +115,7 @@ def AddEmp():
     
     # add succesfully pages 
     # return render_template('searchEmp.html')
+    return redirect(url_for(addSuccess))
 
 @app.route("/addSuccess", methods=['POST'])
 def addSuccess():

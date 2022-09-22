@@ -40,25 +40,29 @@
                 <form action="/add_employees" method="post" enctype=multipart/form-data> 
                     <div class="user-details">
                         <div class="input-box">
-                            <span class="details">Enter Name </span>
+                            <span class="details">Emplpoyee ID</span>
+                            <input type="text" id="generate-id" placeholder="Enter employee id" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" name="email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="details">First Name </span>
                             <input type="text" name="firstName"  placeholder="Enter your first name" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Last Name</span>
                             <input type="text" name="lastName" placeholder="Enter your last name" required>
                         </div>
-                        <div class="input-box">
-                            <span class="details">Email</span>
-                            <input type="text" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Current Address</span>
-                            <input type="text" name="currentAddress" placeholder="Enter your address" required>
-                        </div>
+                        
                         <div class="input-box">
                             <span class="details">Phone Number</span>
                             <input type="text" name="phoneNumber" placeholder="Enter your number" required>
                         </div>
+                        
                         <div class="input-box">
                             <span class="details">Emergency Contact Number</span>
                             <input type="text" name="emergencyContactNumber" placeholder="Enter your number" required>
@@ -93,16 +97,18 @@
                         <input name="dob" type="date">
                     </div>
                     
-                    <span class="department-title">Department</span>
-                    <div class="select">
-                        <select name="department" id="format">
-                            <option selected disabled>Choose Department</option>
-                            <option value="Accounting & Finance">Accounting & Finance</option>
-                            <option value="Human Resources">Human Resources</option>
-                            <option value="Information Technology">Information Technology</option>
-                            <option value="Marketing & Sales">Marketing & Sales</option>
-                            <option value="Research & Development">Research & Development</option>
-                        </select>
+                    <div class="departments">
+                        <span class="department-title">Department</span>
+                        <div class="select">
+                            <select name="department" id="format">
+                                <option selected disabled>Choose Department</option>
+                                <option value="Accounting & Finance">Accounting & Finance</option>
+                                <option value="Human Resources">Human Resources</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Marketing & Sales">Marketing & Sales</option>
+                                <option value="Research & Development">Research & Development</option>
+                            </select>
+                        </div>
                     </div>
                     
                     <div class="image">

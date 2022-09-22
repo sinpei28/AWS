@@ -102,8 +102,7 @@ body{
   border-radius: 5px;
   margin-left: 35vw;
   margin-top: 3vh;
-  height:115%;
-  
+  height:95%; 
 }
 
 .container .title{
@@ -238,12 +237,12 @@ form .date {
   height: 45px;
   margin: 35px 0;
   margin-left: 340px;
-  margin-top: -80px;
+  margin-top: -170px;
 }
 
 input[type="date"]{
   background-color: #f2f2f2;
-  padding: 5px;
+  padding: 7px;
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
@@ -253,8 +252,8 @@ input[type="date"]{
   font-size: 16px;
   border: none;
   outline: none;
-  margin-top: 30px;
-  margin-left: 65px;
+  margin-top: 25px;
+  margin-left: 70px;
   position: static;
 }
 
@@ -266,6 +265,11 @@ input[type="date"]{
 }
 
 /* Select Department Box */
+form .departments {
+  margin-left: 340px;
+  margin-top: 45px;
+}
+
 .department-title{
   font-size: 18px;
   font-weight: 500;
@@ -323,7 +327,7 @@ select::-ms-expand {
 
 /* Image Input */
 form .image {
-  margin-top: 20px;
+  margin-top: 6px;
 }
 
 .img-title{
@@ -337,8 +341,8 @@ input[type=file] {
 
 /* Submit Button */
 form .button{
-  height: 45px;
-  margin: 35px 0
+  height: 35px;
+  margin-top: 13px;
 }
 
 form .button input{

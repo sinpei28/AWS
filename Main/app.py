@@ -122,7 +122,7 @@ def searchEmp():
 
 # seacrhSpecificEmployeeID
 @app.route("/searchEmployee", methods=['POST'])
-def searchEmp():
+def searchEmployee():
     employeeID = request.form['employeeID']
 
     records = searchEmployeeRecordsFromRDS(employeeID)

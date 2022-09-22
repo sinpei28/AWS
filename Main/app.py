@@ -13,7 +13,7 @@ db_conn = connections.Connection(
 )
 
 
-# createTableEmployees = "CREATE TABLE Employees ( employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (employeeID))"
+# createTableEmployees = "CREATE TABLE Employees (employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), employeePic primary key (employeeID))"
 # cursor.execute(createTableEmployees)
 
 
@@ -22,10 +22,13 @@ db_conn = connections.Connection(
 def index():
 
     cursor = db_conn.cursor()
+
+    createTableEmployees = "CREATE TABLE Employees (employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (employeeID))"
+    cursor.execute(createTableEmployees)
+
     cursor.execute("SHOW TABLES")
     for x in cursor:
         print(x)
-        print('No tables')
 
     # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
 

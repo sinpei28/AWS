@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employees Information</title>
+    <title>Add New Employee</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -10,8 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
     
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="style.css"> 
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> -->
 </head>
 
 <body>
@@ -59,6 +59,12 @@
                             <span class="details">Emergency Contact Number</span>
                             <input type="text" name="emergencyContactNumber" placeholder="Enter your number" required>
                         </div>
+                        
+                        <div class="input-box">
+                            <span class="details">Emplpoyee ID</span>
+                            <input type="text" id="generate-id" placeholder="Enter employee id" required>
+                        </div>
+                        
                     </div>
                     
                     <div class="gender-details">
@@ -86,26 +92,31 @@
                     <span class="department-title">Department</span>
                     <div class="select">
                         <select name="department" id="format">
-                           <option selected disabled>Choose Department</option>
-                           <option value="Accounting & Finance">Accounting & Finance</option>
-                           <option value="Human Resources">Human Resources</option>
-                           <option value="Information Technology">Information Technology</option>
-                           <option value="Marketing & Sales">Marketing & Sales</option>
-                           <option value="Research & Development">Research & Development</option>
+                            <option selected disabled>Choose Department</option>
+                            <option value="Accounting & Finance">Accounting & Finance</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Marketing & Sales">Marketing & Sales</option>
+                            <option value="Research & Development">Research & Development</option>
                         </select>
-                     </div>
-
+                    </div>
+                    
+                    <span class="img-title">Image</span> <br>
+                    <input type=file name="emp_img_file" style="height:25px;font: size 13px;color:black;"> <br><br>
+                    
                     <div class="button">
                         <input type="submit" value="Submit">
                     </div>
-                            
-                        
-                </form>
                     
-            </div>
+                    
+                </form>
                 
-        </div>    
-           
-    </body>
+            </div>
+
+        </div>
+            
+    </div>    
         
+</body>
+    
 </html>

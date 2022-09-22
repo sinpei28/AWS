@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #dff0f2ec;
+}
+
+.getemp-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+    height: 50%;
+    
+}
+
+.getemp-container .title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.content form .emp-id {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+    place-content: center;
+}
+
+form .emp-id .id-input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .id-input-box span.emp-id-details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.id-input-box {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.emp-id .id-input-box input{
+    border: none;
+    appearance: none;
+    -ms-appearance : none;
+    -moz-appearance: none;
+    appearance: none;
+    background : #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline :none;
+    font-size : 13px;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    background :
+    linear-gradient(90deg, #4bb8b8, #4bb8b8) center bottom / 0 2px no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom / 100% 2px no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom / 100% no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+input::placeholder{
+    color: grey;
+    transition: color 0.3s ease;
+}
+
+.emp-id .id-input-box input:focus,
+.emp-id .id-input-box input:valid{
+    background-size: 100% 2px, 100% 2px, 100%;
+}
+
+/* Submit Button */
+form .button{
+    height: 45px;
+    margin: 35px 0
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #74d1dbec;
+    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form .button input:hover{
+    /* transform: scale(0.99); */
+    background-color: #4bb8b8;
+}

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #dff0f2ec;
+}
+
+.emp-output-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+    height: 50%;
+    
+}
+
+.emp-output-container .title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.content form .emp-output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+    place-content: center;
+}
+
+form .emp-output span.outputs {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}

@@ -131,7 +131,7 @@ def searchEmployee():
     # print(records)
 
     # return render_template('searchEmpOutput.html', result=records)
-    return render_template('searchEmp.html') 
+    return render_template('searchEmp.html, , result=records') 
 
 
 @app.route("/deleteEmployee", methods=['POST'])

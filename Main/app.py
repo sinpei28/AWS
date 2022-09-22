@@ -12,6 +12,17 @@ db_conn = connections.Connection(
     db = 'HR'
 )
 
+cursor = db_conn.cursor()
+cursor.execute("SHOW TABLES")
+for x in cursor:
+    print(x)
+
+
+# createTableEmployees = "CREATE TABLE Employees ( employeeID varchar(5),firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(50), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (employeeID))"
+# cursor.execute(createTableEmployees)
+
+
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
@@ -25,14 +36,6 @@ def index():
 @app.route("/payroll")
 def payroll():
     return render_template('Payroll.html')
-
-# cursor = db_conn.cursor()
-
-# createTableEmployees = "CREATE TABLE Employees (firstName VARCHAR(10),lastName VARCHAR(10), email VARCHAR(15), address VARCHAR(30), phoneNumber VARCHAR(15), emergencyPhoneNumber VARCHAR(15), gender VARCHAR(10), dateOfBirth DATE, department VARCHAR(10), primary key (firstName))"
-# cursor.execute(createTableEmployees)
-# cursor.execute("SHOW TABLES")
-# for x in cursor:
-#     print(x)
 
 @app.route("/add_employees", methods=['POST'])
 def AddEmp():

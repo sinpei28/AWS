@@ -125,9 +125,10 @@ def searchEmp():
 @app.route("/searchedEmployee", methods=['POST'])
 def searchEmployee():
     employeeID = request.form['employeeID']
-
+    print(employeeID)
+    
     records = searchEmployeeRecordsFromRDS(employeeID)
-    print(records)
+    # print(records)
 
     # return render_template('searchEmpOutput.html', result=records)
     return str(records)

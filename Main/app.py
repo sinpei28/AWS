@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from pymysql import connections
 from datetime import date
+import boto3
 
 app = Flask(__name__)
 
@@ -26,11 +27,10 @@ def index():
     for x in cursor:
         print(x)
 
-    # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50
+    # alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)
 
-    # cursor = db_conn.cursor()
-    # cursor.execute(alter_email)
-    # print('Altered Email Column')
+    # cursor.execute(alter_department)
+    # print('Altered department Column')
 
     return render_template('index.html')
 

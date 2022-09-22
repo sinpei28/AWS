@@ -120,14 +120,14 @@ def AddEmp():
 def searchEmp():
     return render_template('searchEmp.html')
 
-# seacrhSpecificEmployeeID
-@app.route("/searchEmployee", methods=['POST'])
-def searchEmployee():
-    employeeID = request.form['employeeID']
+# # seacrhSpecificEmployeeID
+# @app.route("/searchEmployee", methods=['POST'])
+# def searchEmployee():
+#     employeeID = request.form['employeeID']
 
-    records = searchEmployeeRecordsFromRDS(employeeID)
+#     records = searchEmployeeRecordsFromRDS(employeeID)
 
-    return render_template('searchEmpOutput.html', result=records)
+#     return render_template('searchEmpOutput.html', result=records)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

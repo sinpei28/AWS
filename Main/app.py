@@ -45,9 +45,9 @@ def index():
 
     return render_template('index.html')
 
-@app.route("/payroll")
-def payroll():
-    return render_template('Payroll.html')
+# @app.route("/payroll")
+# def payroll():
+#     return render_template('Payroll.html')
 
 @app.route("/add_employees", methods=['POST'])
 def AddEmp():
@@ -117,7 +117,7 @@ def AddEmp():
     return render_template('searchEmp.html')
 
 # seacrhSpecificEmployeeID
-@app.route("/searchEmp", methods=['POST'])
+@app.route("//searchEmployee", methods=['POST'])
 def searchEmp():
     employeeID = request.form['employeeID']
 

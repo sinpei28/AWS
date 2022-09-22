@@ -27,10 +27,16 @@ def index():
     for x in cursor:
         print(x)
 
-    alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)'
+    delete_record = "DELETE FROM Employees"
 
-    cursor.execute(alter_department)
-    print('Altered department Column')
+    cursor.execute(delete_record)
+    print('Delete records')
+    db_conn.commit()    
+
+    # alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)'
+
+    # cursor.execute(alter_department)
+    # print('Altered department Column')
 
     return render_template('index.html')
 

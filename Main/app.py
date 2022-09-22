@@ -100,7 +100,7 @@ def AddEmp():
                 s3_location,
                 custombucket,
                 emp_image_file_name_in_s3)
-            print("Image Stored location : ", object_url)
+            print(object_url)
 
         except Exception as e:
             return str(e)

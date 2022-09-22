@@ -21,7 +21,7 @@
 
         <div class="side-nav">
             <a href="#" class="logo">
-                <img src="aa.png" width="180" height="60">
+                <img src="{{ url_for('static', filename='aa.png')}}" width="180" height="60">
                 <!-- <img src="aa.png" width="180" height="60"> -->
             </a>
             
@@ -55,47 +55,47 @@
                 <div id="Details">
                     <table style="border-collapse: collapse; width: 100%;">
                 <tbody>
-                    <tr>
-                    <td colspan="2"><a>Employee ID</a></td>
-                    <td>{{result[0]}}</td>
-                    </tr>
-                
-                    <tr>
-                    <td style="width: 50%;">&nbsp; Email</td>
-                    <td>rrrrrrrrrrrrr</td>
-                    </tr> 
+                <tr>
+                <td colspan="2"><a>Employee ID</a></td>
+                <td>{{result[0]}}</td>
+                </tr>
+            
+                <tr>
+                <td style="width: 50%;">&nbsp; Email</td>
+                <td>{{result[3]}}</td>
+                </tr> 
 
                 <tr>
                     <td style="width: 50%;">&nbsp; Name</td>
-                    <td><div id="here"></div></td>
+                    <td><div id="here">{{result[1] + ' ' + result[2]}}</div></td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Contact Number</td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[5]}}</td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Emergency Contact Number </td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[6]}}</td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Current Address </td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[4]}}</td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Date of Birth </td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[8]}}</td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Gender</td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[7]}}</td>
                 </tr>
                 <tr>
                     <td style="width: 50%;">&nbsp; Department</td>
-                    <td>rrrrrrrrrrrrr</td>
+                    <td>{{result[9]}}</td>
                 </tr>
             </tbody>
             </table>
-                </div>
+            </div>
 
             
         </div>

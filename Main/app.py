@@ -27,10 +27,10 @@ def index():
     for x in cursor:
         print(x)
 
-    # alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)
+    alter_department = 'ALTER TABLE Employees MODIFY COLUMN department varchar(30)'
 
-    # cursor.execute(alter_department)
-    # print('Altered department Column')
+    cursor.execute(alter_department)
+    print('Altered department Column')
 
     return render_template('index.html')
 

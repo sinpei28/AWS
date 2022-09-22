@@ -64,6 +64,9 @@ def AddEmp():
     insert_sql = "INSERT INTO Employees VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
+    if imageFile.filename == "":
+        return "Please select a file"
+
     try:
         # write data into RDS
         cursor.execute(insert_sql, (employeeID, firstName, lastName, email, currentAddress, phoneNumber, emergencyContactNumber, gender, dob, department))
@@ -75,6 +78,7 @@ def AddEmp():
         records = cursor.fetchall()
         print(records)
 
+        
         # S3
         emp_name = "" + firstName + " " + lastName
         # Uplaod image file in S3 #

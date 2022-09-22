@@ -33,9 +33,9 @@ def index():
     # print('Delete records')
     # db_conn.commit()    
 
-    alter_link = 'ALTER TABLE Employees ADD COLUMN imageFile varchar(80)'
-    cursor.execute(alter_link)
-    print('Add link column')
+    # alter_link = 'ALTER TABLE Employees ADD COLUMN imageFile varchar(80)'
+    # cursor.execute(alter_link)
+    # print('Add link column')
 
     return render_template('index.html')
 

@@ -25,6 +25,8 @@ def index():
     cursor.execute("SHOW TABLES")
     for x in cursor:
         print(x)
+    
+    print('No tables')
 
     # alter_email = 'ALTER TABLE Employees MODIFY COLUMN email varchar(50)'
 

@@ -27,6 +27,12 @@ def index():
     for x in cursor:
         print(x)
 
+    # read data from RDS
+        select_query = "Select * from Employees"
+        cursor.execute(select_query)
+        records = cursor.fetchall()
+        print(records)
+
     # delete_record = "DELETE FROM Employees"
 
     # cursor.execute(delete_record)

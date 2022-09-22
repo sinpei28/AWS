@@ -121,6 +121,10 @@ def searchEmp():
     print('Hello')
     return render_template('searchEmp.html')
 
+@app.route("/deleteEmployee")
+def deleteEmp():
+    return 'Deleting Employee'
+
 # # seacrhSpecificEmployeeID
 # @app.route("/searchEmployee", methods=['POST'])
 # def searchEmployee():

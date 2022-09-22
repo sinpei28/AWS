@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get Employee Information</title>
+	
+	<script src="https://kit.fontawesome.com/1784c02093.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='searchEmp.css')}}">
+	<!-- <link rel="stylesheet" href="searchEmp.css"> -->
+	
+</head>
+
+<body>
+	<div class="header">
+		
+		<h1 id="goodMorning">Good Morning, admin !</h1>
+		
+		<div class="side-nav">
+			<a href="#" class="logo">
+				<img src="{{ url_for('static', filename='bcts.png')}}" width="180" height="60"> 
+				<!-- <img src="bcts.png" width="180" height="60">  -->
+			</a>
+			<ul class="nav-links">
+				<li><a href="{{ url_for('index')}}"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
+				<li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+				<li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li> 
+				<!-- <li><a href="index.html"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
+					<li><a href="searchEmp.html"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+					<li><a href="deleteEmp.html"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>  -->
+					<div class="active"></div>
+				</ul>
+			</div>
+			
+			<div class="getemp-container">
+				
+				<div class="title">Enter Employee's ID</div>
+				
+				<div class="content">
+					
+					<form id="search-content">
+						<input type="text" name="input" class="input" id="search-input">
+						<button type="reset" class="search" id="search-btn"></button>
+					</form>
+					
+					<script>
+						const input = document.getElementById("search-input");
+						const searchBtn = document.getElementById("search-btn");
+						
+						const expand = () => {
+							searchBtn.classList.toggle("close");
+							input.classList.toggle("square");
+						};
+						
+						searchBtn.addEventListener("click", expand);	
+					</script>
+					
+				</div>	
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+
+</html>

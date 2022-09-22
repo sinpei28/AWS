@@ -14,14 +14,13 @@ body{
 }
 
 .getemp-container {
-    max-width: 700px;
+    max-width: 40vw;
     width: 100%;
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
     position: relative;
-    height: 50%;
-    
+   
 }
 
 .getemp-container .title {
@@ -32,8 +31,7 @@ body{
 .content form .emp-id {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 20px 0;
+
     place-content: center;
 }
 
@@ -45,14 +43,14 @@ form .emp-id .id-input-box{
 form .id-input-box span.emp-id-details{
     display: block;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 
 .id-input-box {
     position: relative;
     font-size: 14px;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 5px;
 }
 
@@ -95,7 +93,7 @@ input::placeholder{
 /* Submit Button */
 form .button{
     height: 45px;
-    margin: 35px 0
+    margin: 35px 0;
 }
 
 form .button input{
@@ -110,7 +108,6 @@ form .button input{
     cursor: pointer;
     transition: all 0.3s ease;
     background-color: #74d1dbec;
-    margin-top: 40px;
     font-family: 'Times New Roman', Times, serif;
 }
 

@@ -117,7 +117,7 @@ def AddEmp():
     return render_template('searchEmp.html')
 
 # seacrhSpecificEmployeeID
-@app.route("//searchEmployee", methods=['POST'])
+@app.route("/searchEmployee", methods=['POST'])
 def searchEmp():
     employeeID = request.form['employeeID']
 

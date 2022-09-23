@@ -156,13 +156,16 @@ def deleteEmp():
 
 @app.route("/deleteEmployee", methods=['POST'])
 def deleteEmployee():
-    cursor = db_conn.cursor()
-    employeeID = request.form['employeeID']    
+    try:
+        cursor = db_conn.cursor()
+        employeeID = request.form['employeeID']    
 
-    records = searchEmployeeRecordsFromRDS(employeeID)
-    result = records[0]
+        records = searchEmployeeRecordsFromRDS(employeeID)
+        result = records[0]
 
-    return render_template('delete2.html', result=result)
+        return render_template('delete2.html', result=result)
+    except:
+        return 'No Such User Record in Database'
 
 @app.route("/deleteEmployeeInfo/<EmpID>")
 def deleteEmployeeInfo(EmpID = None):

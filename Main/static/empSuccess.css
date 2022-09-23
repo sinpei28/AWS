@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   
-  /* body{
+  body{
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,9 +12,9 @@
     padding: 10px;
     background: #dff0f2ec;
   }
-   */
+  
 
-  body {
+  /* body {
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -22,7 +22,7 @@
     align-items: center;
     margin-bottom: 120px;
     background: #dff0f2ec;
-}
+} */
 
 
 
@@ -107,18 +107,6 @@
     top: 55.0%;
   }
   
-  /* .container{
-    max-width: 700px;
-    width: 100%;
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
-    margin-left: 35vw;
-    margin-top: 3vh;
-    height:90%; 
-    overflow: auto;
-  } */
-  
   .container {
     background-color: #fff;
     padding: 20px 1px;
@@ -131,32 +119,6 @@
     overflow: auto;
     border-radius: 5px;
 }
-
-/* .container{
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  margin-left: 35vw;
-  margin-top: 3vh;
-  height:95%; 
-} */
-
-/* div {
-  display: block;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Amatic SC', cursive;
-  font-size: 30px;
-  background-color: #ece7d8;
-  background-size: cover;
-  color: rgb(135, 170, 146);
-  margin-bottom: 150px;
-} */
-
 
   .container .title{
     font-size: 30px;
@@ -252,27 +214,20 @@ style attribute {
 }
 
 #deleteBtn, #cancelDeleteBtn{
-    border: none;
-    appearance: none;
-    -ms-appearance : none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 12px;
-    border-radius: 3px;
-    width: 250px;
-    outline: none;
-    font-size : 13px;
-    border-radius: 0;
-    border-top-left-radius: 3px;
-    border-top-left-radius: 3px;
-    background :
-    linear-gradient(90deg, #4bb8b8, #4bb8b8) center bottom / 0 2px no-repeat,
-    linear-gradient(90deg, #ccc, #ccc) left bottom / 100% 2px no-repeat,
-    linear-gradient(90deg, #fafafa, #fafafa) left bottom / 100% no-repeat;
-    transition: background-size 0.3s ease;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #74d1dbec;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #deleteBtn:hover, #cancelDeleteBtn:hover{
-  /* transform: scale(0.99); */
   background-color: #4bb8b8;
 }

@@ -146,9 +146,13 @@ def searchEmployee():
 
     return render_template('empSuccess.html', result=result)
 
+# direct to the delete page
+@app.route("/deleteEmployee")
+def deleteEmp():
+    return render_template('deleteEmp.html')
 
 @app.route("/deleteEmployee", methods=['POST'])
-def deleteEmp():
+def deleteEmployee():
     cursor = db_conn.cursor()
     employeeID = request.form['employeeID']
 

@@ -3,7 +3,7 @@ cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
 empID = document.getElementById("emp-id").innerHTML
 
 deleteBtn.addEventListener("click", () =>{
-    console.log(empID)
+    window.location = "/deleteEmployeeInfo/" + empID
 })
 
 cancelDeleteBtn.addEventListener("click", () =>{

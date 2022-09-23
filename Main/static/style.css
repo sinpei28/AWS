@@ -4,24 +4,14 @@
   box-sizing: border-box;
 }
 
-/* body{
+body{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   background: #dff0f2ec;
-} */
-
-body {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 180px;
-  background: #dff0f2ec;
-}
+} 
 
 
 .header {
@@ -123,7 +113,7 @@ body {
 
 .container {
   background-color: #fff;
-  padding: 20px 150px;
+  padding: 20px 50px;
   max-width: 850px;
   width: 100%;
   margin-left: 30vw;
@@ -138,7 +128,6 @@ body {
   font-size: 30px;
   font-weight: 500;
   position: relative;
-  padding-left: 5px;
 }
 
 .container .title::before{
@@ -150,7 +139,6 @@ body {
   width: 30px;
   border-radius: 5px;
   background: linear-gradient(135deg, #74d1dbec, #4bb8b8);
-  margin-left: 5px;
 }
 
 /* Input Field */
@@ -189,7 +177,7 @@ form .input-box span.details{
   background : #f2f2f2;
   padding: 12px;
   border-radius: 10px;
-  width: 250px;
+  width: 350px;
   outline :none;
   font-size : 13px;
   border-top-left-radius: 3px;
@@ -264,28 +252,29 @@ form .dob-title {
 
 /* Select Date Box */
 form .date {
-  height: 45px;
-  margin: 35px 0;
-  margin-left: 295px;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: 400px;
   margin-top: -170px;
+  font-size: 18px;  
 }
 
+
 input[type="date"]{
-  background-color: #f2f2f2;
-  padding: 7px;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  font-family: 'Times New Roman', Times, serif;
-  color: #000000;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  margin-top: 25px;
-  margin-left: 70px;
-  position: static;
-  border-radius: 5px;
+border: none;
+appearance: none;
+-ms-appearance : none;
+-moz-appearance: none;
+appearance: none;
+background : #f2f2f2;
+padding: 12px;
+border-radius: 10px;
+width: 350px;
+outline :none;
+font-size : 13px;
+border-top-left-radius: 3px;
+border-top-left-radius: 3px;
 }
 
 ::-webkit-calendar-picker-indicator{
@@ -297,14 +286,13 @@ input[type="date"]{
 
 /* Select Department Box */
 form .departments {
-  margin-left: 340px;
-  margin-top: 45px;
+  margin-left: 400px;
+  margin-top: 30px;
 }
 
 .department-title{
   font-size: 18px;
   font-weight: 500;
-  margin-left: -45px;
 }
 
 select {
@@ -339,7 +327,7 @@ select::-ms-expand {
   overflow: hidden;
   border-radius: .25em;
   margin-top: 5px;
-  margin-left: -50px;
+  margin-left: -2px;
 }
 
 .select::after {
@@ -375,12 +363,11 @@ input[type=file] {
 form .button{
   height: 35px;
   margin-top: 13px;
-  margin-left: 70px;
 }
 
 form .button input{
   height: 100%;
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
   border: none;
   color: #fff;

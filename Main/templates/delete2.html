@@ -31,10 +31,6 @@
                 <li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
                 <li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
 
-                <!-- <li><a href="index.html"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
-                <li><a href="searchEmp.html"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
-                <li><a href="deleteEmp.html"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>  -->
-
                 <div class="active"></div>
             </ul>
         </div>
@@ -50,6 +46,8 @@
 
                     <a href="#" class="ProfilePic">
                     <img src="{{result[10]}}" alt="profile-picture"  width="190" height="210"> 
+                    <!-- if image cannot be displaed alt  
+                    border="5"-->
                     </a>
 
                     <h3>{{result[1] + ' ' + result[2]}}</h3>
@@ -59,7 +57,7 @@
                     <table style="border-collapse: collapse; width: 100%;">
                 <tbody>
                 <tr>
-                <td colspan="2"><a>{{result[0]}}</a></td>
+                <td colspan="2"><a id="emp-id">{{result[0]}}</a></td>
                 </tr>
                 <!-- <tr>
                     <td style="width: 50%;">&nbsp; Name</td>
@@ -97,8 +95,15 @@
                 </tr>
             </tbody>
             </table>
-            </div>
+        </div>
 
+        <div class="button">
+            <button id="deleteBtn">Sure to delete ?"</button>
+        </div>
+
+        <div class="button">
+            <button id="cancelDeleteBtn">Back to Previous Page</button>
+        </div>
             
         </div>
 
@@ -107,6 +112,6 @@
     </div>
 
 </body>
-
+<script src="{{ url_for('static', filename='delete.js')}}"></script>
 
 </html>

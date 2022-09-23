@@ -146,20 +146,34 @@ def searchEmployee():
 
     return render_template('empSuccess.html', result=result)
 
+# direct to the delete page
+@app.route("/deleteEmployee")
+def deleteEmp():
+    return render_template('deleteEmp.html')
 
 @app.route("/deleteEmployee", methods=['POST'])
-def deleteEmp():
+def deleteEmployee():
     cursor = db_conn.cursor()
-    employeeID = request.form['employeeID']
+    employeeID = request.form['employeeID']    
 
-    delete_statement = "DELETE FROM Employees WHERE employeeID = %s"
+    records = searchEmployeeRecordsFromRDS(employeeID)
+    result = records[0]
 
-    cursor.execute(delete_statement, (employeeID))
+    return render_template('delete2.html', result=result)
 
-    db_conn.commit()
-    cursor.close()
+@app.route("/deleteEmployeeInfo/<EmpID>")
+def deleteEmployeeInfo(EmpID = None):
+    # cursor = db_conn.cursor()
 
-    return 'Deleting Employee'
+    # delete_statement = "DELETE FROM Employees WHERE employeeID = %s"
+
+    # cursor.execute(delete_statement, (employeeID))
+
+    # db_conn.commit()
+    # cursor.close()
+
+    return 'Deleting EMP ID >> ' + EmpID 
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)

@@ -14,7 +14,7 @@
 <body>
     <div class="header">
         
-        <h1 id="goodMorning">Good Morning, admin !</h1>
+        <h1 id="goodMorning">Delete Employee</h1>
         
         <div class="side-nav">
             <a href="#" class="logo">
@@ -24,8 +24,8 @@
             <ul class="nav-links">
                 
                 <li><a href="{{ url_for('index')}}"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
-                    <li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
-                    <li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
+                <li><a href="{{ url_for('searchEmp')}}"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
+                <li><a href="{{ url_for('deleteEmp')}}"><i class="fa fa-trash" aria-hidden="true"></i><p style="color:black">Delete Employee</p></a></li>
                     
                     <!-- <li><a href="index.html"><i class="fa fa-user-plus" aria-hidden="true"></i><p style="color:black">Add Employee</p></a></li>
                     <li><a href="searchEmp.html"><i class="fa fa-search" aria-hidden="true"></i><p style="color:black">Search Employee</p></a></li>
@@ -36,17 +36,17 @@
             
             <div class="getemp-container">
                 
-                <div class="title">Enter Employee's ID</div>
+                <div class="title">Delete Employee</div>
                 
                 <div class="content">
                     
-                    <form action="/searchEmployee" method="POST" enctype=multipart/form-data>
+                    <form action="/deleteEmployee" method="POST" enctype=multipart/form-data>
                         
                         <div class="emp-id">
                             
                             <div class="id-input-box">
                                 <span class="emp-id-details">Employee's ID: </span>
-                                <input type="text" name="employeeID" placeholder="Please enter the id" required>
+                                <input type="text" name="employeeID" placeholder="Please enter ID that you wish to delete" required>
                             </div>
                         </div>
                         

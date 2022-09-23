@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-/* body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: #dff0f2ec;
-} */
-
 body {
   margin: 0px;
    padding: 0px;
@@ -132,8 +123,6 @@ border-radius: 5px;
   height:95%; 
 } */
 
-
-
 .container .title{
   font-size: 30px;
   font-weight: 500;
@@ -154,7 +143,6 @@ border-radius: 5px;
 }
 
 /* all about the display of the employee  */
-
 #Personal h2 {
   text-align: center;
   letter-spacing: 1px;

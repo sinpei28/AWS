@@ -133,7 +133,6 @@ def addSuccess():
 def searchEmp():
     return render_template('searchEmp.html')
 
-
 # seacrhSpecificEmployeeID
 @app.route("/searchEmployee", methods=['POST'])
 def searchEmployee():
@@ -143,6 +142,8 @@ def searchEmployee():
 
         records = searchEmployeeRecordsFromRDS(employeeID)
         result = records[0]
+
+        print(records)
 
         return render_template('empSuccess.html', result=result)
     except:

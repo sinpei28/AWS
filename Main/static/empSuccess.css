@@ -213,7 +213,12 @@ style attribute {
   width: 100%;
 }
 
+.button {
+  margin-top: 0.5rem;
+}
+
 #deleteBtn, #cancelDeleteBtn{
+  margin-left: 10%;
   height: 100%;
   width: 80%;
   border-radius: 5px;

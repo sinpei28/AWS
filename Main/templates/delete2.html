@@ -57,7 +57,7 @@
                     <table style="border-collapse: collapse; width: 100%;">
                 <tbody>
                 <tr>
-                <td colspan="2"><a>{{result[0]}}</a></td>
+                <td colspan="2"><a id="emp-id">{{result[0]}}</a></td>
                 </tr>
                 <!-- <tr>
                     <td style="width: 50%;">&nbsp; Name</td>
@@ -98,11 +98,11 @@
         </div>
 
         <div class="button">
-            <input type="sure to delete ?" value="sure mah">
+            <input id="deleteBtn" value="Sure to delete ?">
         </div>
 
         <div class="button">
-            <input type="back to previous delete emp page" value="delete liao">
+            <input id="cancelDeleteBtn" value="Back to Previous Page">
         </div>
             
         </div>
@@ -112,6 +112,6 @@
     </div>
 
 </body>
-
+<script src="{{ url_for('static', filename='delete.js')}}"></script>
 
 </html>

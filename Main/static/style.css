@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-/* body{
+body{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   background: #dff0f2ec;
-}  */
+} 
 
-body {
+/* body {
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -21,7 +21,7 @@ body {
   align-items: center;
   margin-bottom: 300px;
   background: #dff0f2ec;
-}
+} */
 
 .header {
   width: 100%;

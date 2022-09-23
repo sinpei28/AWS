@@ -145,14 +145,14 @@ def searchEmployee():
 
         print(records)
 
-        return render_template('empSuccess.html', result=result)
+        return render_template('searchSuccess.html', result=result)
     except:
         return 'No Such User Record in Database'
 
 # direct to the delete page
 @app.route("/deleteEmployee")
 def deleteEmp():
-    return render_template('deleteEmp.html')
+    return render_template('deleteE mp.html')
 
 @app.route("/deleteEmployee", methods=['POST'])
 def deleteEmployee():

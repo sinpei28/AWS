@@ -15,12 +15,12 @@
 <body>
     <div class="header">
         
-        <h1 id="goodMorning">Good Morning, admin !</h1>
+        <h1 id="goodMorning">Delete Employee</h1>
         
         <div class="side-nav">
             <a href="#" class="logo">
-                <img src="{{ url_for('static', filename='bcts.png')}}" width="180" height="60"> 
-                <!-- <img src="bcts.png" width="180" height="60">  -->
+                <!-- <img src="{{ url_for('static', filename='bcts.png')}}" width="180" height="60">  -->
+                <img src="bcts.png" width="180" height="60"> 
             </a>
             <ul class="nav-links">
                 
@@ -37,22 +37,22 @@
             
             <div class="getemp-container">
                 
-                <div class="title">Enter Employee's ID</div>
+                <div class="title">Delete Employee</div>
                 
                 <div class="content">
                     
-                    <form action="/searchEmployee" method="POST" enctype=multipart/form-data>
+                    <form action="/deleteEmployee" method="POST" enctype=multipart/form-data>
                         
                         <div class="emp-id">
                             
                             <div class="id-input-box">
                                 <span class="emp-id-details">Employee's ID: </span>
-                                <input type="text" name="employeeID" placeholder="Please enter the id" required>
+                                <input type="text" name="employeeID" placeholder="Please enter ID that you wish to delete" required>
                             </div>
                         </div>
                         
                         <div class="button">
-                            <input type="submit" value="Fetch Info">
+                            <input type="Delete" value="Fetch Info">
                         </div>
                         
                         

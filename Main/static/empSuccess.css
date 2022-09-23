@@ -219,6 +219,7 @@ style attribute {
 
 #deleteBtn, #cancelDeleteBtn{
   margin-left: 10%;
+  padding: 1rem 0;
   height: 100%;
   width: 80%;
   border-radius: 5px;

@@ -44,10 +44,6 @@ def index():
 
     return render_template('index.html')
 
-# @app.route("/payroll")
-# def payroll():
-#     return render_template('Payroll.html')
-
 @app.route("/add_employees", methods=['POST'])
 def AddEmp():
     employeeID = request.form['employeeID']
@@ -113,7 +109,6 @@ def AddEmp():
         cursor.close()
     
     # add succesfully pages 
-    # return render_template('searchEmp.html')
     return redirect(url_for('addSuccess'))
 
 @app.route("/addSuccess")

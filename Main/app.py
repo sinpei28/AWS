@@ -152,7 +152,7 @@ def searchEmployee():
 # direct to the delete page
 @app.route("/deleteEmployee")
 def deleteEmp():
-    return render_template('deleteE mp.html')
+    return render_template('deleteEmp.html')
 
 @app.route("/deleteEmployee", methods=['POST'])
 def deleteEmployee():

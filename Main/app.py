@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Flask, render_template, request, redirect, url_for
 from pymysql import connections
 from datetime import date
@@ -138,13 +137,16 @@ def searchEmp():
 # seacrhSpecificEmployeeID
 @app.route("/searchEmployee", methods=['POST'])
 def searchEmployee():
-    employeeID = request.form['employeeID']
-    print(employeeID)
+    try:
+        employeeID = request.form['employeeID']
+        print(employeeID)
 
-    records = searchEmployeeRecordsFromRDS(employeeID)
-    result = records[0]
+        records = searchEmployeeRecordsFromRDS(employeeID)
+        result = records[0]
 
-    return render_template('empSuccess.html', result=result)
+        return render_template('empSuccess.html', result=result)
+    except:
+        return 'No Such User Record in Database'
 
 # direct to the delete page
 @app.route("/deleteEmployee")

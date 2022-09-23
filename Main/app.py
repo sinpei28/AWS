@@ -163,16 +163,18 @@ def deleteEmployee():
 
 @app.route("/deleteEmployeeInfo/<EmpID>")
 def deleteEmployeeInfo(EmpID = None):
-    # cursor = db_conn.cursor()
+    cursor = db_conn.cursor()
 
-    # delete_statement = "DELETE FROM Employees WHERE employeeID = %s"
+    delete_statement = "DELETE FROM Employees WHERE employeeID = %s"
 
-    # cursor.execute(delete_statement, (employeeID))
+    cursor.execute(delete_statement, (EmpID))
 
-    # db_conn.commit()
-    # cursor.close()
+    db_conn.commit()
+    cursor.close()
 
-    return 'Deleting EMP ID >> ' + EmpID 
+    print('Deleted Records')
+
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

@@ -1,6 +1,3 @@
-from crypt import methods
-from logging import exception
-from msilib.schema import Error
 from flask import Flask, render_template, request, redirect, url_for
 from pymysql import connections
 from datetime import date

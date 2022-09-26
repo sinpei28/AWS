@@ -202,6 +202,7 @@ form .button input{
     transition: all 0.3s ease;
     background-color: #74d1dbec;
     font-family: 'Times New Roman', Times, serif;
+    margin-top: -30px;
 }
 form .button input:hover{
     /* transform: scale(0.99); */

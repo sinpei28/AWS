@@ -123,11 +123,11 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
+    height: 6px;
     width: 30px;
     border-radius: 5px;
     background: linear-gradient(135deg, #74d1dbec, #4bb8b8);
-    margin-bottom: 237px;
+    margin-bottom: 245px;
     margin-left: 30px;
 }
 
